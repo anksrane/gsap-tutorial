@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Animation Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            font-family: "Sigmar", serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            overflow-x: hidden;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            background-image: url(https://img.freepik.com/free-photo/sun-sunlight-bright-outdoor-sky_1127-2391.jpg?t=st=1740399120~exp=1740402720~hmac=fb66a7fa0008d4d1a6a65798542d16ff0107ff94fa6cb3ec21bc61e7a590f735&w=1380);
+            background-size: cover;
+            background-position: center;
+        }
+        #nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 50px;
+            color: #fff;
+        }
+        #nav h2{
+            font-size: 30px;
+        }
+        #nav i{
+            font-size: 30px;
+            font-weight: 800;
+        }
+        #full{
+            height: 100%;
+            width: 40%;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.353);
+            top: 0;
+            right: -40%;
+            backdrop-filter: blur(10px);
+            padding: 150px 50px;
+        }
+        #full h4{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        #full i{
+            position: absolute;
+            top: 5%;
+            right:10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <h2>Ankit</h2>
+            <i class="ri-menu-3-fill"></i>
+        </div>
+        <div id="full">
+            <h4>Work</h4>
+            <h4>About Us</h4>
+            <h4>Courses</h4>
+            <h4>Services</h4>
+
+            <i class="ri-close-large-line"></i>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    var tl=gsap.timeline();
+    tl.to("#full",{
+        right:0,
+        duratio
+    })
+</script>
+</body>
+</html>

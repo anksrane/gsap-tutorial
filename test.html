@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    
+<script>
+const url = 'https://google-news13.p.rapidapi.com/business?lr=en-US';
+const options = {
+  method: 'GET',
+  headers: {
+    'x-rapidapi-key': '8052a16c9amshf0af0d99e4e127cp163a94jsn9b57b3c17dc1',
+    'x-rapidapi-host': 'google-news13.p.rapidapi.com'
+  }
+};
+
+// Global variable
+let mainData;
+
+async function fetchData() {
+  try {
+    const response = await fetch(url, options);
+    let temp=await response.json();
+    if(temp.status=="success"){
+        mainData=temp.items;
+    }
+    // mainData = await response.json(); // ✅ Assigning globally
+    console.log("Data inside fetchData:", mainData); // This works
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Use an async function to wait for `fetchData`
+async function main() {
+  await fetchData();
+  console.log("Data outside fetchData:", mainData); // ✅ This works
+}
+
+main();
+</script>
+</body>
+</html>
