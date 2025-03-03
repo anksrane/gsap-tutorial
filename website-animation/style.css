@@ -26,7 +26,16 @@
     font-size: 60px;
     line-height: 1;
 }
+.main-brands-container{
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+}
+.main-brands .img-fluid{
+    max-width: 150px;
+}
 .section-2{
     padding: 40px 0;
 }
-.data{border: 1px solid #534444;padding: 20px;border-radius: 20px;box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);}
+.section-2 .container{overflow: hidden;}
+.data{border: 1px solid #534444;padding: 30px 20px;border-radius: 20px;box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);}
