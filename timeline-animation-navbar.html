@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +40,7 @@
         #nav i{
             font-size: 30px;
             font-weight: 800;
+            cursor: pointer;
         }
         #full{
             height: 100%;
@@ -60,6 +62,10 @@
             position: absolute;
             top: 5%;
             right:10%;
+            cursor: pointer;
+            background-color: #fffff1;
+            padding: 5px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -81,10 +87,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
+    var ham=document.querySelector("#nav i");
+    var cross=document.querySelector("#full i");
     var tl=gsap.timeline();
     tl.to("#full",{
         right:0,
-        // duratio
+        duration:0.3
+    })
+
+    tl.from("#full h4",{
+        // x:150,
+        y:100,
+        duration:0.3,
+        stagger:0.3,
+        opacity:0
+    })
+
+    tl.from('#full i',{
+        opacity:0
+    })
+
+    tl.pause()
+    ham.addEventListener("click",function(){
+        tl.play();
+    })
+    cross.addEventListener("click",function(){
+        tl.reverse();
     })
 </script>
 </body>
